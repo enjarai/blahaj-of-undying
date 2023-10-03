@@ -23,5 +23,11 @@
 	"depends": {
 		"java": ">=17",
 		"fabric-api": "*"
+	},
+
+	"custom": {
+		"projects": {
+			"modrinth": "aJb4vlkM"
+		}
 	}
 }
