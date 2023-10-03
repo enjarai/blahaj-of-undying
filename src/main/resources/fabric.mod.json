@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "blahaj-totem",
+	"version": "${version}",
+	"name": "Blåhaj of Undying",
+	"description": "Soft toy, shark mod, 16px, client-side.",
+	"authors": [
+		"enjarai"
+	],
+	"contact": {
+		"homepage": "https://enjarai.dev/",
+		"sources": "https://github.com/enjarai/blahaj-of-undying",
+		"issues": "https://github.com/enjarai/blahaj-of-undying/issues"
+	},
+	"license": "Unlicense",
+	"icon": "assets/blahaj-totem/icon.png",
+	"environment": "client",
+	"entrypoints": {
+	},
+	"mixins": [
+		"blahaj-totem.mixins.json"
+	],
+	"depends": {
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
