@@ -2,7 +2,7 @@
 
 This is a client-side version of [Blåhaj](https://modrinth.com/mod/blahaj) by Hibi. This version replaces the totem of undying model and name instead of creating a new item for our beloved Blåhaj, who you can now cuddle even on vanilla servers!
 
-![](https://raw.githubusercontent.com/Hibiii/Blahaj/main/.pretty_readme/banner.png)
+![](img/blahaj.png)
 
 ## Content
 
