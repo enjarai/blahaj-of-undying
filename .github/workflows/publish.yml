@@ -85,10 +85,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
           game-versions: |
-            1.18
-            1.18.1
-            1.18.2
-
             1.19
             1.19.1
             1.19.2
@@ -98,3 +94,5 @@ jobs:
             1.20
             1.20.1
             1.20.2
+            1.20.3
+            1.20.4

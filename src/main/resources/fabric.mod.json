@@ -12,17 +12,24 @@
 		"sources": "https://github.com/enjarai/blahaj-of-undying",
 		"issues": "https://github.com/enjarai/blahaj-of-undying/issues"
 	},
-	"license": "Unlicense",
-	"icon": "assets/blahaj-totem/icon.png",
+	"license": "Unlicense, Some assets LGPL-2",
+	"icon": "assets/blahaj_totem/icon.png",
 	"environment": "client",
 	"entrypoints": {
+		"client": [
+			"dev.enjarai.blahajtotem.BlahajTotem"
+		],
+		"fabric-datagen": [
+			"dev.enjarai.blahajtotem.BlahajTotem"
+		]
 	},
 	"mixins": [
 		"blahaj-totem.mixins.json"
 	],
 	"depends": {
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric": "*",
+		"minecraft": ">=1.19"
 	},
 
 	"custom": {

@@ -1,0 +1,6 @@
+{
+  "parent": "blahaj_totem:item/shork",
+  "textures": {
+    "0": "blahaj_totem:item/blahaj_skins/demiromantic_shark"
+  }
+}
