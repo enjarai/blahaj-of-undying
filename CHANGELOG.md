@@ -1,6 +1,1 @@
-- Added ALL THE SHORK!
-  - You can now change the texture of your shark plush of immortality by changing the item name in an anvil.
-  - See mod description for details.
-  - Pride textures have been adapted from the Blåhaj Beyond mod.
-- Slightly tweaked the blahaj model based on the one Blåhaj Beyond uses.
-  - This decreases the size of the top fin, among other small changes.
+- Changed the color of totem particles depending on the shark type used.
