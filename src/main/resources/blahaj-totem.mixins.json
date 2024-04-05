@@ -9,6 +9,7 @@
   },
   "client": [
     "BipedEntityModelMixin",
+    "ClientPlayNetworkHandlerMixin",
     "PlayerEntityRendererMixin"
   ]
 }

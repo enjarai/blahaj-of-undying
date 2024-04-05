@@ -27,7 +27,7 @@ public class ShorkModelGenerator extends FabricModelProvider {
 
             var overrides = new JsonArray();
             for (int i = 0; i < BlahajTotem.VARIANTS.size(); i++) {
-                var variant = BlahajTotem.VARIANTS.get(i);
+                var variant = BlahajTotem.VARIANTS.get(i).name();
 
                 var override = new JsonObject();
 
@@ -45,12 +45,12 @@ public class ShorkModelGenerator extends FabricModelProvider {
         });
 
         BlahajTotem.VARIANTS.forEach(variant -> {
-            itemModelGenerator.writer.accept(BlahajTotem.id("item/blahaj_skins/" + variant + "_shark"), () -> {
+            itemModelGenerator.writer.accept(BlahajTotem.id("item/blahaj_skins/" + variant.name() + "_shark"), () -> {
                 var model = new JsonObject();
                 model.addProperty("parent", BlahajTotem.id("item/shork").toString());
 
                 var textures = new JsonObject();
-                textures.addProperty("0", BlahajTotem.id("item/blahaj_skins/" + variant + "_shark").toString());
+                textures.addProperty("0", BlahajTotem.id("item/blahaj_skins/" + variant.name() + "_shark").toString());
                 model.add("textures", textures);
 
                 return model;
