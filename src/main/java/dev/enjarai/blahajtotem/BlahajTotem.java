@@ -5,6 +5,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
@@ -76,7 +77,7 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
 
     @Nullable
     public static BlahajType getShorkType(ItemStack stack) {
-        if (stack.isOf(Items.TOTEM_OF_UNDYING) && stack.hasCustomName()) {
+        if (stack.isOf(Items.TOTEM_OF_UNDYING) && stack.contains(DataComponentTypes.CUSTOM_NAME)) {
             var name = Arrays.asList(stack.getName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]"));
             var variant = VARIANTS.stream().filter(v -> name.contains(v.name())).reduce((v1, v2) -> v2.name().length() > v1.name().length() ? v2 : v1);
 

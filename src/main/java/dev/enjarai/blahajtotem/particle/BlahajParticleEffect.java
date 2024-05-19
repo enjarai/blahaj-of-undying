@@ -1,41 +1,37 @@
 package dev.enjarai.blahajtotem.particle;
 
-import com.mojang.brigadier.StringReader;
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import dev.enjarai.blahajtotem.BlahajTotem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.PacketByteBuf;
+import net.minecraft.network.RegistryByteBuf;
+import net.minecraft.network.codec.PacketCodec;
+import net.minecraft.network.codec.PacketCodecs;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleType;
-import net.minecraft.registry.Registries;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public record BlahajParticleEffect(ParticleType<BlahajParticleEffect> type, int[] colors) implements ParticleEffect {
-    @SuppressWarnings("deprecation")
-    public static final ParticleEffect.Factory<BlahajParticleEffect> PARAMETERS_FACTORY = new ParticleEffect.Factory<>() {
-        @Override
-        public BlahajParticleEffect read(ParticleType<BlahajParticleEffect> type, StringReader reader) throws CommandSyntaxException {
-            return new BlahajParticleEffect(type, new int[0]); // This doesn't actually need to work with commands, so dummy impl it is
-        }
+    public static MapCodec<BlahajParticleEffect> createCodec(ParticleType<BlahajParticleEffect> type) {
+        return Codec.INT_STREAM.xmap(
+                intStream -> new BlahajParticleEffect(type, intStream.toArray()),
+                effect -> IntStream.of(effect.colors)
+        ).fieldOf("colors");
+    }
 
-        @Override
-        public BlahajParticleEffect read(ParticleType<BlahajParticleEffect> type, PacketByteBuf buf) {
-            return new BlahajParticleEffect(type, buf.readIntArray());
-        }
-    };
+    public static PacketCodec<RegistryByteBuf, BlahajParticleEffect> createPacketCodec(ParticleType<BlahajParticleEffect> type) {
+        return PacketCodec.tuple(
+                PacketCodecs.collection(ArrayList::new, PacketCodecs.INTEGER, 32), effect -> Arrays.stream(effect.colors).boxed().toList(),
+                list -> new BlahajParticleEffect(type, list.stream().mapToInt(i -> i).toArray())
+        );
+    }
 
     @Override
     public ParticleType<?> getType() {
         return type;
-    }
-
-    @Override
-    public void write(PacketByteBuf buf) {
-        buf.writeIntArray(colors);
-    }
-
-    @Override
-    public String asString() {
-        return Registries.PARTICLE_TYPE.getId(getType()) + "";
     }
 
     public static int[] getColorsForShork(ItemStack shorkStack) {

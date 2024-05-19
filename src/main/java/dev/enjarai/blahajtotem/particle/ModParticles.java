@@ -8,7 +8,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
 public class ModParticles {
-    public static final ParticleType<BlahajParticleEffect> BLAHAJ_OF_UNDYING = FabricParticleTypes.complex(BlahajParticleEffect.PARAMETERS_FACTORY);
+    public static final ParticleType<BlahajParticleEffect> BLAHAJ_OF_UNDYING =
+            FabricParticleTypes.complex(BlahajParticleEffect::createCodec, BlahajParticleEffect::createPacketCodec);
 
     public static void register() {
         Registry.register(Registries.PARTICLE_TYPE, BlahajTotem.id("blahaj_of_undying"), BLAHAJ_OF_UNDYING);

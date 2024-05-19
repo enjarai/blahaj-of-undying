@@ -1,2 +1,1 @@
-- Changed the color of totem particles depending on the shark type used.
-- Added an icelandic translation (Thanks @VipelyRS)
+- Updated to 1.20.6.
