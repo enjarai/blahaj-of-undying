@@ -47,7 +47,7 @@ public class ShorkModelGenerator extends FabricModelProvider {
         BlahajTotem.VARIANTS.forEach(variant -> {
             itemModelGenerator.writer.accept(BlahajTotem.id("item/blahaj_skins/" + variant.name() + "_shark"), () -> {
                 var model = new JsonObject();
-                model.addProperty("parent", BlahajTotem.id("item/shork").toString());
+                model.addProperty("parent", variant.model().toString());
 
                 var textures = new JsonObject();
                 textures.addProperty("0", BlahajTotem.id("item/blahaj_skins/" + variant.name() + "_shark").toString());

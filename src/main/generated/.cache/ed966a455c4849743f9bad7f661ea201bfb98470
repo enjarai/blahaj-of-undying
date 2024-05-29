@@ -1,9 +1,10 @@
-// 1.20.1	2024-04-05T21:39:24.2305186	Blåhaj of Undying/Model Definitions
+// 1.20.6	2024-05-29T15:02:22.831031	Blåhaj of Undying/Model Definitions
 0328344f7ee0d0d51f6710182c2f66d9ab0e7f8e assets\blahaj_totem\models\item\blahaj_skins\demiboy_shark.json
 1cc7cdb3a189ebb3e5672fffda5973b9157cf3bf assets\blahaj_totem\models\item\blahaj_skins\trans_shark.json
 d4c40cb9fad911fa329d304d157868a6db6041b1 assets\blahaj_totem\models\item\blahaj_skins\demiromantic_shark.json
-857b1d567aca141fce7cb5900a83e5d668f61797 assets\minecraft\models\item\totem_of_undying.json
+1a043225708ea5537309702ab3bd88b9237a260c assets\minecraft\models\item\totem_of_undying.json
 6480899a119dce40aa3ad47fb28bdc0d776fecc6 assets\blahaj_totem\models\item\blahaj_skins\magenta_shark.json
+42e40aaa4c4076f056e6f1d335893b1efe468a52 assets\blahaj_totem\models\item\blahaj_skins\whale_shark.json
 3320dab9f7381073b86bc884982a0a51347ed292 assets\blahaj_totem\models\item\blahaj_skins\pan_shark.json
 5b685cab9b59595cd9fc4b207c80951eedc77012 assets\blahaj_totem\models\item\blahaj_skins\aro_shark.json
 a2b7664f3c519ae310e808626f5d783a12e8fca3 assets\blahaj_totem\models\item\blahaj_skins\red_shark.json
@@ -31,6 +32,7 @@ d881583e251c11ae404ea68cb04daac63d94e5e0 assets\blahaj_totem\models\item\blahaj_
 a637dee63154ec70699d93328b70fc5b470d3eb5 assets\blahaj_totem\models\item\blahaj_skins\intersex_shark.json
 cd85b976ce552cbd02795313e6517d180a2aa67c assets\blahaj_totem\models\item\blahaj_skins\enby_shark.json
 17472c6473e6b9bc7407a973ec8fc0cdb9acaec8 assets\blahaj_totem\models\item\blahaj_skins\lime_shark.json
+7cd731b0d2e292069b3a7486a153bf40a1c46940 assets\blahaj_totem\models\item\blahaj_skins\prider_shark.json
 39c4ac2e5aa2ac1952d8c7a3784dafd39abed01c assets\blahaj_totem\models\item\blahaj_skins\gay_shark.json
 19e7004880b6b8e45a2d1238f29032ec6eb7b23c assets\blahaj_totem\models\item\blahaj_skins\yellow_shark.json
 cc6510e0814568222bdf5e9db2a44bfee278ccf4 assets\blahaj_totem\models\item\blahaj_skins\grey_shark.json

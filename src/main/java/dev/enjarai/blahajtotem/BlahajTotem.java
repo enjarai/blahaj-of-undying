@@ -54,7 +54,10 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
             new BlahajType("pan", 0xf2ce7d, 0xd668b9, 0x6595b0),
             new BlahajType("poly", 0xe34160, 0x6d9ff8, 0x2f2545, 0xffae3b),
             new BlahajType("pride", 0xde585b, 0xf07f5d, 0xe4bd5c, 0x96df5e, 0x6261a1, 0x704c9e),
-            new BlahajType("trans", 0x6f9fba, 0xe882b6, 0xc6d3d6)
+            new BlahajType("prider", 0xde585b, 0xf07f5d, 0xe4bd5c, 0x96df5e, 0x6261a1, 0x704c9e, 0x6f9fba, 0xe882b6, 0xc6d3d6),
+            new BlahajType("trans", 0x6f9fba, 0xe882b6, 0xc6d3d6),
+
+            new BlahajType("whale", BlahajTotem.id("item/whal"), 0x39508e, 0x546bb3, 0xc3d0d3)
     );
 
     @Override

@@ -1,1 +1,3 @@
-- Updated to 1.20.6.
+- Added `whale` shark variant, turning your shark into our also beloved Blåvingad.
+- Added `prider` shark texture, similar to the `pride` shark, but with just a tad more representation.
+- Tweaked `trans` shark texture to be more in line with other pride textures.
