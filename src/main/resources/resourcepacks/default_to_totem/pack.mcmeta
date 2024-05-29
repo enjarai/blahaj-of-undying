@@ -1,0 +1,7 @@
+{
+  "pack": {
+    "pack_format": 32,
+    "supported_formats": [1, 9999],
+    "description": {"type": "translatable", "translate": "blahaj_totem.resourcepack.default_to_totem.description"}
+  }
+}

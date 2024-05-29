@@ -1,5 +1,6 @@
 package dev.enjarai.blahajtotem.mixin;
 
+import dev.enjarai.blahajtotem.BlahajFlags;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
@@ -20,7 +21,7 @@ public class PlayerEntityRendererMixin {
     )
     private static void cuddleBlahaj(AbstractClientPlayerEntity player, Hand hand, CallbackInfoReturnable<BipedEntityModel.ArmPose> ci) {
         ItemStack lv = player.getStackInHand(hand);
-        if(lv.isOf(Items.TOTEM_OF_UNDYING)) {
+        if (BlahajFlags.isBlahaj(lv)) {
             ci.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_HOLD);
             ci.cancel();
         }

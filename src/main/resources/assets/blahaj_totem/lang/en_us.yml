@@ -1,0 +1,5 @@
+blahaj_totem:
+  resourcepack:
+    default_to_totem:
+      .: Default to Totem
+      description: No more Blåhaj by default

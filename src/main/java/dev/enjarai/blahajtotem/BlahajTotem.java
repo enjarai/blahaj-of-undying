@@ -1,19 +1,27 @@
 package dev.enjarai.blahajtotem;
 
+import com.mojang.datafixers.util.Pair;
 import dev.enjarai.blahajtotem.particle.ModParticles;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.resource.ResourceType;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
+import java.util.stream.Stream;
 
 public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoint {
     public static final String MOD_ID = "blahaj-totem";
@@ -57,7 +65,11 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
             new BlahajType("prider", 0xde585b, 0xf07f5d, 0xe4bd5c, 0x96df5e, 0x6261a1, 0x704c9e, 0x6f9fba, 0xe882b6, 0xc6d3d6),
             new BlahajType("trans", 0x6f9fba, 0xe882b6, 0xc6d3d6),
 
-            new BlahajType("whale", BlahajTotem.id("item/whal"), 0x39508e, 0x546bb3, 0xc3d0d3)
+            new BlahajType("whale", List.of("blavingad", "blåvingad"), BlahajTotem.id("item/whal"), 0x39508e, 0x546bb3, 0xc3d0d3),
+            new BlahajType("shark", List.of( // Can't have enough options :D
+                    "blahaj", "blåhaj", "shork", "shonk", "sharky", "sharkie", "haj", "haai", "hai",
+                    "biter", "chomper", "chompy", "muncher", "megalodon", "meg", "meggy", "gawr", "finn"
+            ), 0x56839d, 0x74a4bf, 0xc3d0d3)
     );
 
     @Override
@@ -70,6 +82,12 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
             return 0f;
         });
 
+        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new BlahajFlags());
+        ResourceManagerHelper.registerBuiltinResourcePack(
+                BlahajTotem.id("default_to_totem"), FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
+                Text.translatable("blahaj_totem.resourcepack.default_to_totem"), ResourcePackActivationType.NORMAL
+        );
+
         ModParticles.register();
     }
 
@@ -78,19 +96,35 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
         fabricDataGenerator.createPack().addProvider(ShorkModelGenerator::new);
     }
 
+    public static final LinkedList<Pair<String, BlahajType>> SEARCHABLE_VARIANTS = new LinkedList<>(VARIANTS.stream()
+            .flatMap(type -> Stream.concat(
+                    Stream.of(Pair.of(type.name(), type)),
+                    type.alternatives().stream().map(alt -> Pair.of(alt, type))
+            ))
+            .toList());
+
     @Nullable
     public static BlahajType getShorkType(ItemStack stack) {
         if (stack.isOf(Items.TOTEM_OF_UNDYING) && stack.contains(DataComponentTypes.CUSTOM_NAME)) {
             var name = Arrays.asList(stack.getName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]"));
-            var variant = VARIANTS.stream().filter(v -> name.contains(v.name())).reduce((v1, v2) -> v2.name().length() > v1.name().length() ? v2 : v1);
+            Pair<String, BlahajType> type = null;
 
-            return variant.orElse(null);
+            for (var variant : SEARCHABLE_VARIANTS) {
+                var vName = variant.getFirst();
+                if (name.contains(vName) && (type == null || vName.length() > type.getFirst().length())) {
+                    type = variant;
+                }
+            }
+
+            if (type != null) {
+                return type.getSecond();
+            }
         }
 
         return null;
     }
 
     public static Identifier id(String path) {
-        return new Identifier(NAMESPACE, path);
+        return Identifier.of(NAMESPACE, path);
     }
 }

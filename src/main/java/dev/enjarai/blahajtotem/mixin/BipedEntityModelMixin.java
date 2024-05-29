@@ -1,5 +1,6 @@
 package dev.enjarai.blahajtotem.mixin;
 
+import dev.enjarai.blahajtotem.BlahajFlags;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.LivingEntity;
@@ -30,7 +31,7 @@ public class BipedEntityModelMixin {
             cancellable = true
     )
     public void poseArms(LivingEntity entity, CallbackInfo ci) {
-        if(entity.getMainHandStack().isOf(Items.TOTEM_OF_UNDYING) || entity.getOffHandStack().isOf(Items.TOTEM_OF_UNDYING)) {
+        if(BlahajFlags.isBlahaj(entity.getMainHandStack()) || BlahajFlags.isBlahaj(entity.getOffHandStack())) {
             this.rightArm.pitch = -0.95F;
             this.rightArm.yaw = (float) (-Math.PI / 8);
             this.leftArm.pitch = -0.90F;

@@ -23,7 +23,7 @@ public class ShorkModelGenerator extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.writer.accept(ModelIds.getItemModelId(Items.TOTEM_OF_UNDYING), () -> {
             var model = new JsonObject();
-            model.addProperty("parent", BlahajTotem.id("item/shork").toString());
+            model.addProperty("parent", BlahajTotem.id("item/totem_parent").toString());
 
             var overrides = new JsonArray();
             for (int i = 0; i < BlahajTotem.VARIANTS.size(); i++) {
