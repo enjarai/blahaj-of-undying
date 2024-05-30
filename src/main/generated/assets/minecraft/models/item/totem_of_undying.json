@@ -4,222 +4,518 @@
     {
       "model": "blahaj_totem:item/blahaj_skins/gray_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.027027028
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/grey_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.054054055
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/red_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.08108108
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/orange_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.10810811
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/yellow_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.13513513
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/lime_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.16216215
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/green_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.1891892
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/cyan_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.21621622
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/blue_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.24324325
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/purple_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.27027026
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/magenta_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.2972973
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/pink_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.3243243
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/ace_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.35135135
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/agender_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.3783784
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/aro_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.4054054
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/aroace_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.43243244
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/bi_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.45945945
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/demiboy_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.4864865
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/demigirl_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.5135135
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/demiromantic_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.5405405
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/demisexual_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.5675676
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/enby_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.5945946
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/gay_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.6216216
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/genderfluid_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.6486486
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/genderqueer_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.6756757
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/greyromantic_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.7027027
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/greyrose_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.7297297
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/greysexual_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.7567568
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/intersex_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.7837838
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/lesbian_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.8108108
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/pan_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.8378378
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/poly_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.8648649
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/pride_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.8918919
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/prider_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.9189189
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/trans_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.9459459
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/whale_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
         "blahaj_totem:shork_variant": 0.972973
       }
     },
     {
       "model": "blahaj_totem:item/blahaj_skins/shark_shark",
       "predicate": {
+        "blahaj_totem:shork_large": 0,
+        "blahaj_totem:shork_variant": 1.0
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/gray_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.027027028
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/grey_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.054054055
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/red_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.08108108
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/orange_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.10810811
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/yellow_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.13513513
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/lime_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.16216215
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/green_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.1891892
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/cyan_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.21621622
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/blue_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.24324325
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/purple_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.27027026
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/magenta_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.2972973
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/pink_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.3243243
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/ace_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.35135135
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/agender_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.3783784
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/aro_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.4054054
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/aroace_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.43243244
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/bi_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.45945945
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/demiboy_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.4864865
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/demigirl_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.5135135
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/demiromantic_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.5405405
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/demisexual_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.5675676
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/enby_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.5945946
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/gay_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.6216216
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/genderfluid_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.6486486
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/genderqueer_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.6756757
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/greyromantic_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.7027027
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/greyrose_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.7297297
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/greysexual_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.7567568
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/intersex_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.7837838
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/lesbian_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.8108108
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/pan_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.8378378
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/poly_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.8648649
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/pride_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.8918919
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/prider_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.9189189
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/trans_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.9459459
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/whale_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
+        "blahaj_totem:shork_variant": 0.972973
+      }
+    },
+    {
+      "model": "blahaj_totem:item/blahaj_skins/shark_shark_large",
+      "predicate": {
+        "blahaj_totem:shork_large": 1,
         "blahaj_totem:shork_variant": 1.0
       }
     }

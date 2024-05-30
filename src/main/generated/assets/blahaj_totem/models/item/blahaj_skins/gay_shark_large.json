@@ -1,0 +1,6 @@
+{
+  "parent": "blahaj_totem:item/shork_large",
+  "textures": {
+    "0": "blahaj_totem:item/blahaj_skins/gay_shark"
+  }
+}

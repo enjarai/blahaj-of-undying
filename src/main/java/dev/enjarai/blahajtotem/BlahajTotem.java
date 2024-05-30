@@ -27,6 +27,7 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
     public static final String MOD_ID = "blahaj-totem";
     public static final String NAMESPACE = "blahaj_totem";
 
+    public static final List<String> LARGE_KEYWORDS = List.of("large", "big", "chonker");
     public static final List<BlahajType> VARIANTS = List.of(
             new BlahajType("gray", 0x888885, 0xa9a9a7, 0xc3d0d3),
             new BlahajType("grey", 0x888885, 0xa9a9a7, 0xc3d0d3),
@@ -78,6 +79,17 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
             var type = getShorkType(stack);
             if (type != null) {
                 return (VARIANTS.indexOf(type) + 1f) / VARIANTS.size();
+            }
+            return 0f;
+        });
+        ModelPredicateProviderRegistry.register(Items.TOTEM_OF_UNDYING, id("shork_large"), (stack, world, entity, seed) -> {
+            if (stack.isOf(Items.TOTEM_OF_UNDYING) && stack.contains(DataComponentTypes.CUSTOM_NAME)) {
+                var name = Arrays.asList(stack.getName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]"));
+                for (var keyword : LARGE_KEYWORDS) {
+                    if (name.contains(keyword)) {
+                        return 1f;
+                    }
+                }
             }
             return 0f;
         });
