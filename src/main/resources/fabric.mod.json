@@ -33,6 +33,11 @@
 	},
 
 	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/WcYsDDQtyR"
+			}
+		},
 		"projects": {
 			"modrinth": "aJb4vlkM"
 		}

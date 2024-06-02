@@ -70,7 +70,11 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
             new BlahajType("shark", List.of( // Can't have enough options :D
                     "blahaj", "blåhaj", "shork", "shonk", "sharky", "sharkie", "haj", "haai", "hai",
                     "biter", "chomper", "chompy", "muncher", "megalodon", "meg", "meggy", "gawr", "finn"
-            ), 0x56839d, 0x74a4bf, 0xc3d0d3)
+            ), 0x56839d, 0x74a4bf, 0xc3d0d3),
+            new BlahajType("bridget", List.of( // Options are not optional here
+                    "biscuit", "basket", "bucket", "baguette", "bridge", "budget", "brisket", "bidet", "brexit",
+                    "bracket", "brigade", "bingus", "blanket"
+            ), BlahajTotem.id("item/basket"), 0x6287c5, 0x8fafde, 0xebc186)
     );
 
     @Override

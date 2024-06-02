@@ -38,4 +38,6 @@ Like the original, this mod is licensed under the [Unlicense](./LICENSE). Feel f
 
 The pride variants of the Blåhaj have been adapted from [Blåhaj Beyond](https://modrinth.com/mod/blahaj-beyond) by [IThundxr](https://github.com/IThundxr), and are licensed under LGPL-2.
 
+The Biscuit and other character plushies were created by [Crephan](https://twitter.com/Crephann).
+
 The icon of this project is the Blobhaj by Heatherhorns, and is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
