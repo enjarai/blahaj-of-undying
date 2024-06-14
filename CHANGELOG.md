@@ -1,2 +1,2 @@
-- Added the option to not have Totems be Blåhaj by default as a builtin resource pack.
-- Fixed a mistake in the updated `trans` shark texture.
+- Added `large` as an additional keyword. This can be combined with any other keyword to make your shork truly massive.
+- Added a `bridget` plush as a variant. Thank you [Crephan](https://twitter.com/Crephann) for the model and texture!
