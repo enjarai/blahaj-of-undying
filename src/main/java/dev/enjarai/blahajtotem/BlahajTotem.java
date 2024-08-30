@@ -17,10 +17,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoint {
@@ -70,11 +67,14 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
             new BlahajType("shark", List.of( // Can't have enough options :D
                     "blahaj", "blåhaj", "shork", "shonk", "sharky", "sharkie", "haj", "haai", "hai",
                     "biter", "chomper", "chompy", "muncher", "megalodon", "meg", "meggy", "gawr", "finn"
-            ), 0x56839d, 0x74a4bf, 0xc3d0d3),
+            ), true, 0x56839d, 0x74a4bf, 0xc3d0d3),
             new BlahajType("bridget", List.of( // Options are not optional here
                     "biscuit", "basket", "bucket", "baguette", "bridge", "budget", "brisket", "bidet", "brexit",
                     "bracket", "brigade", "bingus", "blanket"
-            ), BlahajTotem.id("item/basket"), 0x6287c5, 0x8fafde, 0xebc186)
+            ), BlahajTotem.id("item/basket"), 0x6287c5, 0x8fafde, 0xebc186),
+            new BlahajType("astolfo_bean", List.of("bean", "astolfo bean"), BlahajTotem.id("item/astolfo_bean"), 0xffbfdc, 0xecf1f6, 0x141616, 0xf2ca7d, 0x91392f),
+            new BlahajType("mahiro_school", List.of("mahiro", "oyama", "onimai"), BlahajTotem.id("item/mahiro"), 0xeddbd6, 0xffaaa7, 0x79819a),
+            new BlahajType("mahiro_lazy", List.of("lazy mahiro", "lazy oyama", "lazy onimai"), BlahajTotem.id("item/mahiro"), 0xeddbd6, 0xffaaa7, 0xf38b9a, 0xebf6fa)
     );
 
     @Override
@@ -122,12 +122,15 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
     @Nullable
     public static BlahajType getShorkType(ItemStack stack) {
         if (stack.isOf(Items.TOTEM_OF_UNDYING) && stack.contains(DataComponentTypes.CUSTOM_NAME)) {
-            var name = Arrays.asList(stack.getName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]"));
+            var name = new HashSet<>(Arrays.asList(stack.getName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]")));
             Pair<String, BlahajType> type = null;
 
             for (var variant : SEARCHABLE_VARIANTS) {
-                var vName = variant.getFirst();
-                if (name.contains(vName) && (type == null || vName.length() > type.getFirst().length())) {
+                String vName = variant.getFirst();
+                List<String> vSplit = Arrays.asList(vName.split("[ \\-_]"));
+
+                if (name.containsAll(vSplit) && (type == null || (vName.length() > type.getFirst().length()
+                        && !variant.getSecond().lesser()) || type.getSecond().lesser())) {
                     type = variant;
                 }
             }

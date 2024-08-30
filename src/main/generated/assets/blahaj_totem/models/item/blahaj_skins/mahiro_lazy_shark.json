@@ -1,0 +1,6 @@
+{
+  "parent": "blahaj_totem:item/mahiro",
+  "textures": {
+    "0": "blahaj_totem:item/blahaj_skins/mahiro_lazy_shark"
+  }
+}

@@ -1,2 +1,2 @@
-- Added `large` as an additional keyword. This can be combined with any other keyword to make your shork truly massive.
-- Added a `bridget` plush as a variant. Thank you [Crephan](https://twitter.com/Crephann) for the model and texture!
+- Added `mahiro`, `lazy mahiro`, and `astolfo bean` plushies as variants. Thank you [Crephan](https://twitter.com/Crephann) for the model and texture!
+- Fixed some small issues.

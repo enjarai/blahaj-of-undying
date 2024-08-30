@@ -1,0 +1,6 @@
+{
+  "parent": "blahaj_totem:item/astolfo_bean_large",
+  "textures": {
+    "0": "blahaj_totem:item/blahaj_skins/astolfo_bean_shark"
+  }
+}
