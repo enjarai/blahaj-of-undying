@@ -1,2 +1,2 @@
-- Added `mahiro`, `lazy mahiro`, and `astolfo bean` plushies as variants. Thank you [Crephan](https://twitter.com/Crephann) for the model and texture!
-- Fixed some small issues.
+- Fixed mistake in astolfo UVs.
+- Added a few more aliases for lazy mahiro.

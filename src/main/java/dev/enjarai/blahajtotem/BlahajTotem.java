@@ -74,7 +74,9 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
             ), BlahajTotem.id("item/basket"), 0x6287c5, 0x8fafde, 0xebc186),
             new BlahajType("astolfo_bean", List.of("bean", "astolfo bean"), BlahajTotem.id("item/astolfo_bean"), 0xffbfdc, 0xecf1f6, 0x141616, 0xf2ca7d, 0x91392f),
             new BlahajType("mahiro_school", List.of("mahiro", "oyama", "onimai"), BlahajTotem.id("item/mahiro"), 0xeddbd6, 0xffaaa7, 0x79819a),
-            new BlahajType("mahiro_lazy", List.of("lazy mahiro", "lazy oyama", "lazy onimai"), BlahajTotem.id("item/mahiro"), 0xeddbd6, 0xffaaa7, 0xf38b9a, 0xebf6fa)
+            new BlahajType("mahiro_lazy", List.of(
+                    "lazy mahiro", "lazy oyama", "lazy onimai", "eepy mahiro", "eepy oyama", "eepy onimai"
+            ), BlahajTotem.id("item/mahiro"), 0xeddbd6, 0xffaaa7, 0xf38b9a, 0xebf6fa)
     );
 
     @Override
