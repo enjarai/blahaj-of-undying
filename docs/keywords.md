@@ -1,5 +1,8 @@
 # Keywords
 
+This page contains all current plushies provided by Blåhaj of Undying. 
+The correct keywords will be listed among them.
+
 <div class="grid-view">
     <div class="grid-item">
         <a href="#normal">
