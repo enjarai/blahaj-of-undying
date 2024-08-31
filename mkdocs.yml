@@ -1,0 +1,44 @@
+site_name: Blåhaj of Undying Wiki
+
+nav:
+  - index.md
+  - keywords.md
+
+theme:
+  name: material
+  features:
+  favicon: img/shork.png
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
+    features:
+      - navigation.expand
+#    toggle:
+#      icon: material/weather-night
+#      name: Switch to dark mode
+
+extra_css:
+  - css/extra.css
+
+
+repo_url: https://github.com/enjarai/blahaj-of-undying
+repo_name: enjarai/blahaj-of-undying
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+plugins:
+  - search
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/enjarai/blahaj-of-undying
+      name: Github
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/WcYsDDQtyR
+      name: enjarai's library Discord server
+  generator: false

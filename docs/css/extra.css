@@ -1,0 +1,36 @@
+:root {
+    --md-primary-fg-color: #f5abb9;
+    --md-primary-fg-color--light: #f5abb9;
+    --md-primary-fg-color--dark: #cc6679;
+    --md-accent-fg-color: #77dbff;
+    --md-accent-fg-color--transparent: rgba(91, 207, 250, 0.1);
+    --md-accent-fg-color--dark: #2796bf;
+}
+
+[data-md-color-scheme="default"] {
+    --md-footer-bg-color: #77dbff;
+    --md-footer-bg-color--dark: #77dbff;
+}
+
+.grid-view {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: center;
+}
+
+.grid-item {
+    flex: 0 0 auto;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.grid-item img {
+    width: 110px;
+    height: 110px;
+}
