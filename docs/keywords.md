@@ -1,7 +1,7 @@
 # Keywords
 
 This page contains all current plushies provided by Blåhaj of Undying. 
-The correct keywords will be listed among them.
+Click on the plush to see a list of keywords you can use to get it.
 
 <div class="grid-view">
     <div class="grid-item">
@@ -259,7 +259,7 @@ Keywords: `shark`, `blahaj`, `blåhaj`, `shork`,
 
 ## Whale
 
-![Whale](../img/variants/shark.png)
+![Whale](../img/variants/whale.png)
 
 Keywords: `whale`, `blavingad`, `blåvingad`
 
