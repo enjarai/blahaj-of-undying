@@ -3,3 +3,6 @@ blahaj_totem:
     default_to_totem:
       .: Default to Totem
       description: No more Blåhaj by default
+
+  command:
+    show_wiki: "§7Access the %s §7wiki to see all features, the list of plushies and their keywords:"

@@ -81,7 +81,19 @@ Click on the plush to see a list of keywords you can use to get it.
             <img src="../img/variants/pink.png">
             Pink
         </a>
-    </div>    
+    </div> 
+    <div class="grid-item">
+        <a href="#black">
+            <img src="../img/variants/black.png">
+            Black
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="#white">
+            <img src="../img/variants/white.png">
+            White
+        </a>
+    </div>
     <div class="grid-item">
         <a href="#ace">
             <img src="../img/variants/ace.png">
@@ -267,7 +279,7 @@ Keywords: `whale`, `blavingad`, `blåvingad`
 
 ![Grey](../img/variants/grey.png)
 
-Keywords: `gray`, `grey`
+Keywords: `gray`, `grey`, `grahaj`, `gråhaj`, `klappar haj`
 
 ## Red
 
@@ -327,7 +339,19 @@ Keywords: `magenta`
 
 ![Pink](../img/variants/pink.png)
 
-Keywords: `pink`
+Keywords: `pink`, `rosahaj`
+
+## Black
+
+![Black](../img/variants/black.png)
+
+Keywords: `black`
+
+## White
+
+![White](../img/variants/white.png)
+
+Keywords: `white`
 
 ## Ace
 
@@ -357,7 +381,7 @@ Keywords: `aroace`
 
 ![Bi](../img/variants/bi.png)
 
-Keywords: `bi`
+Keywords: `bi`, `bisexual`
 
 ## Demiboy
 
@@ -387,13 +411,13 @@ Keywords: `demisexual`
 
 ![Enby](../img/variants/enby.png)
 
-Keywords: `enby`
+Keywords: `enby`, `non binary`, `non-binary`
 
 ## Gay
 
 ![Gay](../img/variants/gay.png)
 
-Keywords: `gay`
+Keywords: `gay`, `homosexual`, `yaoi`
 
 ## Genderfluid
 
@@ -411,19 +435,19 @@ Keywords: `genderqueer`
 
 ![Greyromantic](../img/variants/greyromantic.png)
 
-Keywords: `greyromantic`
+Keywords: `greyromantic`, `grayromantic`
 
 ## Greyrose
 
 ![Greyrose](../img/variants/greyrose.png)
 
-Keywords: `greyrose`
+Keywords: `greyrose`, `grayrose`
 
 ## Greysexual
 
 ![Greysexual](../img/variants/greysexual.png)
 
-Keywords: `greysexual`
+Keywords: `greysexual`, `graysexual`
 
 ## Intersex
 
@@ -435,13 +459,13 @@ Keywords: `intersex`
 
 ![Lesbian](../img/variants/lesbian.png)
 
-Keywords: `lesbian`
+Keywords: `lesbian`, `yuri`
 
 ## Pan
 
 ![Pan](../img/variants/pan.png)
 
-Keywords: `pan`
+Keywords: `pan`, `pansexual`
 
 ## Poly
 
@@ -453,19 +477,19 @@ Keywords: `poly`
 
 ![Pride](../img/variants/pride.png)
 
-Keywords: `pride`
+Keywords: `pride`, `lgbt`
 
 ## Prider
 
 ![Prider](../img/variants/prider.png)
 
-Keywords: `prider`
+Keywords: `prider`, `lgbtqia`
 
 ## Trans
 
 ![Trans](../img/variants/trans.png)
 
-Keywords: `trans`
+Keywords: `trans`, `transgender`
 
 ## Bridget
 
@@ -491,4 +515,4 @@ Keywords: `mahiro`
 
 ![Lazy Mahiro](../img/variants/lazy-mahiro.png)
 
-Keywords: `lazy-mahiro`
+Keywords: `lazy mahiro`

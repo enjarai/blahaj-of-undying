@@ -1,6 +1,6 @@
 {
   "parent": "blahaj_totem:item/shork_large",
   "textures": {
-    "0": "blahaj_totem:item/blahaj_skins/gray_shark"
+    "0": "blahaj_totem:item/blahaj_skins/white_shark"
   }
 }

@@ -1,2 +1,4 @@
-- Fixed mistake in astolfo UVs.
-- Added a few more aliases for lazy mahiro.
+- Added `white` and `black` shark variants.
+- Added the `/blahaj wiki` client-side command to get a link to the wiki page.
+- Added a bunch of additional keywords for existing variants.
+- Fixed a few missing models in certain edge-cases.
