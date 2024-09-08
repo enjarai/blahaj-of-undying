@@ -509,10 +509,10 @@ Keywords: `astolfo bean`, `bean`
 
 ![Mahiro](../img/variants/mahiro.png)
 
-Keywords: `mahiro`
+Keywords: `mahiro`, `oyama`, `onimai`
 
 ## Lazy Mahiro
 
 ![Lazy Mahiro](../img/variants/lazy-mahiro.png)
 
-Keywords: `lazy mahiro`
+Keywords: `lazy mahiro`, `lazy oyama`, `lazy onimai`, `eepy mahiro`, `eepy oyama`, `eepy onimai`
