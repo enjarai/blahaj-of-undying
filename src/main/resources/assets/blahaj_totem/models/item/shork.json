@@ -1,4 +1,5 @@
 {
+	"huggable": true,
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "blahaj_totem:item/blahaj_skins/shark_shark",

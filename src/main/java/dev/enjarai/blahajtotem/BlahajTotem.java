@@ -102,7 +102,6 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
             return 0f;
         });
 
-        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new BlahajFlags());
         ResourceManagerHelper.registerBuiltinResourcePack(
                 BlahajTotem.id("default_to_totem"), FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
                 Text.translatable("blahaj_totem.resourcepack.default_to_totem"), ResourcePackActivationType.NORMAL

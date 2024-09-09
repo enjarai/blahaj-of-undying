@@ -8,8 +8,11 @@
     "defaultRequire": 1
   },
   "client": [
+    "BasicBakedModelMixin",
     "BipedEntityModelMixin",
     "ClientPlayNetworkHandlerMixin",
+    "JsonUnbakedModel$DeserializerMixin",
+    "JsonUnbakedModelMixin",
     "PlayerEntityRendererMixin"
   ]
 }
