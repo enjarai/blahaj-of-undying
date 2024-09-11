@@ -70,6 +70,7 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
                     "blahaj", "blåhaj", "shork", "shonk", "sharky", "sharkie", "haj", "haai", "hai",
                     "biter", "chomper", "chompy", "muncher", "megalodon", "meg", "meggy", "gawr", "finn"
             ), true, 0x56839d, 0x74a4bf, 0xc3d0d3),
+            new BlahajType("bread", List.of("actual baguette"), BlahajTotem.id("item/bread"), 0xd0a245, 0xae7d17, 0x66490f),
             new BlahajType("bridget", List.of( // Options are not optional here
                     "biscuit", "basket", "bucket", "baguette", "bridge", "budget", "brisket", "bidet", "brexit",
                     "bracket", "brigade", "bingus", "blanket"

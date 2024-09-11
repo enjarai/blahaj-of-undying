@@ -3,6 +3,7 @@ site_name: Blåhaj of Undying Wiki
 nav:
   - index.md
   - keywords.md
+  - resourcepacks.md
 
 theme:
   name: material

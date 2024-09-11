@@ -1,4 +1,3 @@
-- Added `white` and `black` shark variants.
-- Added the `/blahaj wiki` client-side command to get a link to the wiki page.
-- Added a bunch of additional keywords for existing variants.
-- Fixed a few missing models in certain edge-cases.
+- Added `bread` plushie variant.
+- Added resource pack support for the cuddling animation.
+  - See the wiki for more details!

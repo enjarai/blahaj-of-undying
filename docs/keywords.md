@@ -17,6 +17,12 @@ Click on the plush to see a list of keywords you can use to get it.
         </a>
     </div>
     <div class="grid-item">
+        <a href="#bread">
+            <img src="../img/variants/bread.png">
+            Bread
+        </a>
+    </div>
+    <div class="grid-item">
         <a href="#grey">
             <img src="../img/variants/grey.png">
             Grey
@@ -274,6 +280,12 @@ Keywords: `shark`, `blahaj`, `blåhaj`, `shork`,
 ![Whale](../img/variants/whale.png)
 
 Keywords: `whale`, `blavingad`, `blåvingad`
+
+## Bread
+
+![Bread](../img/variants/bread.png)
+
+Keywords: `bread`, `actual baguette`
 
 ## Grey
 
