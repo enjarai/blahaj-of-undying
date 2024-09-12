@@ -1,3 +1,1 @@
-- Added `bread` plushie variant.
-- Added resource pack support for the cuddling animation.
-  - See the wiki for more details!
+- Fixed a compatibility issue with other mods using Fabric Rendering API to wrap models. (#10)
