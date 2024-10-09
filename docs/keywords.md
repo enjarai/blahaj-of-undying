@@ -501,7 +501,7 @@ Keywords: `prider`, `lgbtqia`
 
 ![Trans](../img/variants/trans.png)
 
-Keywords: `trans`, `transgender`
+Keywords: `trans`, `transgender`,`:3`
 
 ## Bridget
 
