@@ -1,1 +1,1 @@
-- Fixed a compatibility issue with other mods using Fabric Rendering API to wrap models. (#10)
+- Updated to 1.21.2-1.21.3.

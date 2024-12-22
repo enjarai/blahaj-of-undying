@@ -34,7 +34,7 @@ public class JsonUnbakedModelMixin implements UnbakedHuggableModel {
     }
 
     @ModifyReturnValue(
-            method = "bake(Lnet/minecraft/client/render/model/Baker;Lnet/minecraft/client/render/model/json/JsonUnbakedModel;Ljava/util/function/Function;Lnet/minecraft/client/render/model/ModelBakeSettings;Z)Lnet/minecraft/client/render/model/BakedModel;",
+            method = "bake(Ljava/util/function/Function;Lnet/minecraft/client/render/model/ModelBakeSettings;Z)Lnet/minecraft/client/render/model/BakedModel;",
             at = @At("RETURN")
     )
     private BakedModel addFieldToBakedModel(BakedModel original) {

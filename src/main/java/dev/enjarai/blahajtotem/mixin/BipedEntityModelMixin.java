@@ -1,8 +1,10 @@
 package dev.enjarai.blahajtotem.mixin;
 
 import dev.enjarai.blahajtotem.BlahajFlags;
+import dev.enjarai.blahajtotem.BlahajTotem;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
+import net.minecraft.client.render.entity.state.BipedEntityRenderState;
 import net.minecraft.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -29,8 +31,8 @@ public class BipedEntityModelMixin {
             ),
             cancellable = true
     )
-    public void poseArms(LivingEntity entity, CallbackInfo ci) {
-        if (BlahajFlags.isHuggable(entity.getMainHandStack(), entity) || BlahajFlags.isHuggable(entity.getOffHandStack(), entity)) {
+    public void poseArms(BipedEntityRenderState state, BipedEntityModel.ArmPose armPose, CallbackInfo ci) {
+        if (BlahajTotem.HUGGABLE_KEY.get(state)) {
             this.rightArm.pitch = -0.95F;
             this.rightArm.yaw = (float) (-Math.PI / 8);
             this.leftArm.pitch = -0.90F;

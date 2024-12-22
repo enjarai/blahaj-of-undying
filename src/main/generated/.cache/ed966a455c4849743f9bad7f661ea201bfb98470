@@ -1,4 +1,4 @@
-// 1.21	2024-09-09T22:34:07.514492	Blåhaj of Undying/Model Definitions
+// 1.21.3	2024-12-22T16:23:06.276903	Blåhaj of Undying/Model Definitions
 0328344f7ee0d0d51f6710182c2f66d9ab0e7f8e assets\blahaj_totem\models\item\blahaj_skins\demiboy_shark.json
 1cc7cdb3a189ebb3e5672fffda5973b9157cf3bf assets\blahaj_totem\models\item\blahaj_skins\trans_shark.json
 d4c40cb9fad911fa329d304d157868a6db6041b1 assets\blahaj_totem\models\item\blahaj_skins\demiromantic_shark.json
@@ -50,8 +50,8 @@ a996e38412a172c565e87ba334ccb51526a7d8a1 assets\blahaj_totem\models\item\blahaj_
 30e044408d9e6528cdceee706a2c700a1ccedcb7 assets\blahaj_totem\models\item\blahaj_skins\gay_shark_large.json
 5ac660f24961217093872c57c38c0037303fa713 assets\blahaj_totem\models\item\blahaj_skins\black_shark_large.json
 c866f4e09912152360fdaf70e1048259e775c130 assets\blahaj_totem\models\item\blahaj_skins\aroace_shark.json
-ea76f00bbcdc7f32c6934fb82788d19826ab4cdf assets\blahaj_totem\models\item\blahaj_skins\greysexual_shark_large.json
 bf489d5e2929f52ad1dec25edefd1fdda7f955a7 assets\blahaj_totem\models\item\blahaj_skins\pink_shark.json
+ea76f00bbcdc7f32c6934fb82788d19826ab4cdf assets\blahaj_totem\models\item\blahaj_skins\greysexual_shark_large.json
 a360a31013a318d5127807e735e4d765eb5d71a8 assets\blahaj_totem\models\item\blahaj_skins\lime_shark_large.json
 0f83dd3c22aec2932c2b8ba29f92bf2fe05b082b assets\blahaj_totem\models\item\blahaj_skins\demisexual_shark.json
 6a38447a725d2101c2ca9a01bb32397df87c2f72 assets\blahaj_totem\models\item\blahaj_skins\pride_shark_large.json
@@ -78,8 +78,8 @@ a637dee63154ec70699d93328b70fc5b470d3eb5 assets\blahaj_totem\models\item\blahaj_
 220fbfe22304823c3d1f227067f0c24e5adf2264 assets\blahaj_totem\models\item\blahaj_skins\demigirl_shark_large.json
 966fe64ffd7f0a88d1b1610a2731bd8c310103d2 assets\blahaj_totem\models\item\blahaj_skins\bread_shark.json
 c28ac96c3368532907b375846d6fd6bd8efa8b96 assets\blahaj_totem\models\item\blahaj_skins\mahiro_lazy_shark_large.json
-cd85b976ce552cbd02795313e6517d180a2aa67c assets\blahaj_totem\models\item\blahaj_skins\enby_shark.json
 b410eb01c2af6ff62c57521dfd949a89e22f2553 assets\blahaj_totem\models\item\blahaj_skins\trans_shark_large.json
+cd85b976ce552cbd02795313e6517d180a2aa67c assets\blahaj_totem\models\item\blahaj_skins\enby_shark.json
 c6954c10495a6dfb5bc3e5c9c9e6346746db23e4 assets\blahaj_totem\models\item\blahaj_skins\demisexual_shark_large.json
 a16e76ea5da40575535b20f2d107d59af9301dfb assets\blahaj_totem\models\item\blahaj_skins\astolfo_bean_shark_large.json
 1c15666520d7cf271d0f71a9b4a0c159a04b93c4 assets\blahaj_totem\models\item\blahaj_skins\bridget_shark.json

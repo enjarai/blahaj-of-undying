@@ -11,11 +11,15 @@ import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.resource.ResourceType;
 import net.minecraft.text.Text;
+import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
+import nl.enjarai.cicada.api.render.RenderStateKey;
+import nl.enjarai.cicada.api.render.RenderStateUpdateEvent;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
@@ -82,6 +86,8 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
             ), BlahajTotem.id("item/mahiro"), 0xeddbd6, 0xffaaa7, 0xf38b9a, 0xebf6fa)
     );
 
+    public static final RenderStateKey<Boolean> HUGGABLE_KEY = RenderStateKey.of(id("huggable"), false);
+
     @Override
     public void onInitializeClient() {
         ModelPredicateProviderRegistry.register(Items.TOTEM_OF_UNDYING, id("shork_variant"), (stack, world, entity, seed) -> {
@@ -111,6 +117,16 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
         ModParticles.register();
 
         ClientCommandRegistrationCallback.EVENT.register(BlahajCommand::register);
+
+        RenderStateUpdateEvent.get(PlayerEntity.class).register((player, entityRenderState, tickDelta) -> {
+            for (Hand hand : Hand.values()) {
+                ItemStack lv = player.getStackInHand(hand);
+                if (BlahajFlags.isHuggable(lv, player)) {
+                    HUGGABLE_KEY.put(entityRenderState, true);
+                    return;
+                }
+            }
+        });
     }
 
     @Override
