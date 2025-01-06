@@ -14,7 +14,7 @@ public class ItemRenderStateMixin implements HuggableItemRenderState {
     public boolean blahaj_totem$isHuggable() {
         for (var layer : layers) {
             var model = ((LayerRenderStateAccessor) layer).getModel();
-            if (model != null && ((BakedHuggableModel) model).blahaj_totem$isHuggable()) {
+            if (model instanceof BakedHuggableModel huggable && huggable.blahaj_totem$isHuggable()) {
                 return true;
             }
         }
