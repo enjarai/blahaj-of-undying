@@ -1,6 +1,7 @@
 package dev.enjarai.blahajtotem;
 
 import com.mojang.datafixers.util.Pair;
+import dev.enjarai.blahajtotem.model.BlahajItemModel;
 import dev.enjarai.blahajtotem.particle.ModParticles;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
@@ -9,12 +10,11 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.client.item.ModelPredicateProviderRegistry;
+import net.minecraft.client.render.item.model.ItemModelTypes;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.resource.ResourceType;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
@@ -90,24 +90,7 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
 
     @Override
     public void onInitializeClient() {
-        ModelPredicateProviderRegistry.register(Items.TOTEM_OF_UNDYING, id("shork_variant"), (stack, world, entity, seed) -> {
-            var type = getShorkType(stack);
-            if (type != null) {
-                return (VARIANTS.indexOf(type) + 1f) / VARIANTS.size();
-            }
-            return 0f;
-        });
-        ModelPredicateProviderRegistry.register(Items.TOTEM_OF_UNDYING, id("shork_large"), (stack, world, entity, seed) -> {
-            if (stack.isOf(Items.TOTEM_OF_UNDYING) && stack.contains(DataComponentTypes.CUSTOM_NAME)) {
-                var name = Arrays.asList(stack.getName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]"));
-                for (var keyword : LARGE_KEYWORDS) {
-                    if (name.contains(keyword)) {
-                        return 1f;
-                    }
-                }
-            }
-            return 0f;
-        });
+        ItemModelTypes.ID_MAPPER.put(BlahajTotem.id("blahaj"), BlahajItemModel.Unbaked.CODEC);
 
         ResourceManagerHelper.registerBuiltinResourcePack(
                 BlahajTotem.id("default_to_totem"), FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
@@ -119,14 +102,18 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
         ClientCommandRegistrationCallback.EVENT.register(BlahajCommand::register);
 
         RenderStateUpdateEvent.get(PlayerEntity.class).register((player, entityRenderState, tickDelta) -> {
-            for (Hand hand : Hand.values()) {
-                ItemStack lv = player.getStackInHand(hand);
-                if (BlahajFlags.isHuggable(lv, player)) {
-                    HUGGABLE_KEY.put(entityRenderState, true);
-                    return;
-                }
-            }
+            HUGGABLE_KEY.put(entityRenderState, isHugging(player));
         });
+    }
+
+    public static boolean isHugging(PlayerEntity player) {
+        for (Hand hand : Hand.values()) {
+            ItemStack lv = player.getStackInHand(hand);
+            if (BlahajFlags.isHuggable(lv, player)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

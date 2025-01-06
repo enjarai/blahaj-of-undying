@@ -11,8 +11,10 @@
     "BasicBakedModelMixin",
     "BipedEntityModelMixin",
     "ClientPlayNetworkHandlerMixin",
+    "ItemRenderStateMixin",
     "JsonUnbakedModel$DeserializerMixin",
     "JsonUnbakedModelMixin",
+    "LayerRenderStateAccessor",
     "PlayerEntityRendererMixin"
   ]
 }

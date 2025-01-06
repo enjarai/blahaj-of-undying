@@ -4,6 +4,7 @@ import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import dev.enjarai.blahajtotem.pond.BakedHuggableModel;
 import dev.enjarai.blahajtotem.pond.UnbakedHuggableModel;
 import net.minecraft.client.render.model.BakedModel;
+import net.minecraft.client.render.model.UnbakedModel;
 import net.minecraft.client.render.model.json.JsonUnbakedModel;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,7 +14,8 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(JsonUnbakedModel.class)
 public class JsonUnbakedModelMixin implements UnbakedHuggableModel {
-    @Shadow @Nullable protected JsonUnbakedModel parent;
+    @Shadow @Nullable
+    private UnbakedModel parent;
     @Unique @Nullable
     private Boolean huggable;
 
@@ -26,15 +28,15 @@ public class JsonUnbakedModelMixin implements UnbakedHuggableModel {
     public boolean blahaj_totem$isHuggable() {
         if (huggable != null) {
             return huggable;
-        } else if (parent != null) {
-            return ((UnbakedHuggableModel) parent).blahaj_totem$isHuggable();
+        } else if (parent != null && parent instanceof UnbakedHuggableModel parentModel) {
+            return parentModel.blahaj_totem$isHuggable();
         } else {
             return false;
         }
     }
 
     @ModifyReturnValue(
-            method = "bake(Ljava/util/function/Function;Lnet/minecraft/client/render/model/ModelBakeSettings;Z)Lnet/minecraft/client/render/model/BakedModel;",
+            method = "bake",
             at = @At("RETURN")
     )
     private BakedModel addFieldToBakedModel(BakedModel original) {

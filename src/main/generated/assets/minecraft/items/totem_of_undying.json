@@ -1,0 +1,634 @@
+{
+  "model": {
+    "type": "blahaj_totem:blahaj",
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "blahaj_totem:item/totem_parent"
+    },
+    "variants": [
+      {
+        "keywords": [
+          "grey",
+          "gray",
+          "grahaj",
+          "gråhaj",
+          "klappar haj"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/grey_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/grey_shark"
+        }
+      },
+      {
+        "keywords": [
+          "red"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/red_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/red_shark"
+        }
+      },
+      {
+        "keywords": [
+          "orange"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/orange_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/orange_shark"
+        }
+      },
+      {
+        "keywords": [
+          "yellow"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/yellow_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/yellow_shark"
+        }
+      },
+      {
+        "keywords": [
+          "lime"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/lime_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/lime_shark"
+        }
+      },
+      {
+        "keywords": [
+          "green"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/green_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/green_shark"
+        }
+      },
+      {
+        "keywords": [
+          "cyan"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/cyan_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/cyan_shark"
+        }
+      },
+      {
+        "keywords": [
+          "blue"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/blue_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/blue_shark"
+        }
+      },
+      {
+        "keywords": [
+          "purple"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/purple_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/purple_shark"
+        }
+      },
+      {
+        "keywords": [
+          "magenta"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/magenta_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/magenta_shark"
+        }
+      },
+      {
+        "keywords": [
+          "pink",
+          "rosahaj"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/pink_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/pink_shark"
+        }
+      },
+      {
+        "keywords": [
+          "black"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/black_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/black_shark"
+        }
+      },
+      {
+        "keywords": [
+          "white"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/white_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/white_shark"
+        }
+      },
+      {
+        "keywords": [
+          "ace"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/ace_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/ace_shark"
+        }
+      },
+      {
+        "keywords": [
+          "agender"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/agender_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/agender_shark"
+        }
+      },
+      {
+        "keywords": [
+          "aro"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/aro_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/aro_shark"
+        }
+      },
+      {
+        "keywords": [
+          "aroace"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/aroace_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/aroace_shark"
+        }
+      },
+      {
+        "keywords": [
+          "bi",
+          "bisexual"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/bi_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/bi_shark"
+        }
+      },
+      {
+        "keywords": [
+          "demiboy"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/demiboy_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/demiboy_shark"
+        }
+      },
+      {
+        "keywords": [
+          "demigirl"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/demigirl_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/demigirl_shark"
+        }
+      },
+      {
+        "keywords": [
+          "demiromantic"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/demiromantic_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/demiromantic_shark"
+        }
+      },
+      {
+        "keywords": [
+          "demisexual"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/demisexual_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/demisexual_shark"
+        }
+      },
+      {
+        "keywords": [
+          "enby",
+          "non binary",
+          "non-binary"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/enby_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/enby_shark"
+        }
+      },
+      {
+        "keywords": [
+          "gay",
+          "homosexual",
+          "yaoi"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/gay_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/gay_shark"
+        }
+      },
+      {
+        "keywords": [
+          "genderfluid"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/genderfluid_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/genderfluid_shark"
+        }
+      },
+      {
+        "keywords": [
+          "genderqueer"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/genderqueer_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/genderqueer_shark"
+        }
+      },
+      {
+        "keywords": [
+          "greyromantic",
+          "grayromantic"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/greyromantic_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/greyromantic_shark"
+        }
+      },
+      {
+        "keywords": [
+          "greyrose",
+          "grayrose"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/greyrose_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/greyrose_shark"
+        }
+      },
+      {
+        "keywords": [
+          "greysexual",
+          "graysexual"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/greysexual_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/greysexual_shark"
+        }
+      },
+      {
+        "keywords": [
+          "intersex"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/intersex_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/intersex_shark"
+        }
+      },
+      {
+        "keywords": [
+          "lesbian",
+          "yuri"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/lesbian_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/lesbian_shark"
+        }
+      },
+      {
+        "keywords": [
+          "pan",
+          "pansexual"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/pan_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/pan_shark"
+        }
+      },
+      {
+        "keywords": [
+          "poly"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/poly_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/poly_shark"
+        }
+      },
+      {
+        "keywords": [
+          "pride",
+          "lgbt"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/pride_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/pride_shark"
+        }
+      },
+      {
+        "keywords": [
+          "prider",
+          "lgbtqia"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/prider_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/prider_shark"
+        }
+      },
+      {
+        "keywords": [
+          "trans",
+          "transgender"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/trans_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/trans_shark"
+        }
+      },
+      {
+        "keywords": [
+          "whale",
+          "blavingad",
+          "blåvingad"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/whale_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/whale_shark"
+        }
+      },
+      {
+        "keywords": [
+          "shark",
+          "blahaj",
+          "blåhaj",
+          "shork",
+          "shonk",
+          "sharky",
+          "sharkie",
+          "haj",
+          "haai",
+          "hai",
+          "biter",
+          "chomper",
+          "chompy",
+          "muncher",
+          "megalodon",
+          "meg",
+          "meggy",
+          "gawr",
+          "finn"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/shark_shark_large"
+        },
+        "lesser": true,
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/shark_shark"
+        }
+      },
+      {
+        "keywords": [
+          "bread",
+          "actual baguette"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/bread_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/bread_shark"
+        }
+      },
+      {
+        "keywords": [
+          "bridget",
+          "biscuit",
+          "basket",
+          "bucket",
+          "baguette",
+          "bridge",
+          "budget",
+          "brisket",
+          "bidet",
+          "brexit",
+          "bracket",
+          "brigade",
+          "bingus",
+          "blanket"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/bridget_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/bridget_shark"
+        }
+      },
+      {
+        "keywords": [
+          "astolfo_bean",
+          "bean",
+          "astolfo bean"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/astolfo_bean_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/astolfo_bean_shark"
+        }
+      },
+      {
+        "keywords": [
+          "mahiro_school",
+          "mahiro",
+          "oyama",
+          "onimai"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/mahiro_school_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/mahiro_school_shark"
+        }
+      },
+      {
+        "keywords": [
+          "mahiro_lazy",
+          "lazy mahiro",
+          "lazy oyama",
+          "lazy onimai",
+          "eepy mahiro",
+          "eepy oyama",
+          "eepy onimai"
+        ],
+        "large": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/mahiro_lazy_shark_large"
+        },
+        "normal": {
+          "type": "minecraft:model",
+          "model": "blahaj_totem:item/blahaj_skins/mahiro_lazy_shark"
+        }
+      }
+    ]
+  }
+}

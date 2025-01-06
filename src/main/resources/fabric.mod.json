@@ -29,7 +29,7 @@
 	"depends": {
 		"java": ">=17",
 		"fabric": "*",
-		"minecraft": ">=1.21",
+		"minecraft": ">=1.21.4",
 		"cicada": ">=0.10.2"
 	},
 

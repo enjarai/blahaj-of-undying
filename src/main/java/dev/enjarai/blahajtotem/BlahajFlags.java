@@ -1,15 +1,18 @@
 package dev.enjarai.blahajtotem;
 
-import dev.enjarai.blahajtotem.pond.BakedHuggableModel;
-import net.fabricmc.fabric.api.renderer.v1.model.WrapperBakedModel;
+import dev.enjarai.blahajtotem.pond.HuggableItemRenderState;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.render.item.ItemRenderState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ModelTransformationMode;
 
 public class BlahajFlags {
+    private static final ItemRenderState reusableRenderState = new ItemRenderState();
+
     public static boolean isHuggable(ItemStack itemStack, LivingEntity entity) {
-        var model = MinecraftClient.getInstance().getItemRenderer().getModel(itemStack, entity.getWorld(), entity, 0);
-        model = WrapperBakedModel.unwrap(model);
-        return model instanceof BakedHuggableModel huggableModel && huggableModel.blahaj_totem$isHuggable();
+        reusableRenderState.clear();
+        MinecraftClient.getInstance().getItemModelManager().update(reusableRenderState, itemStack, ModelTransformationMode.NONE, entity.getWorld(), entity, 0);
+        return ((HuggableItemRenderState) reusableRenderState).blahaj_totem$isHuggable();
     }
 }
