@@ -26,7 +26,7 @@ public class BipedEntityModelMixin {
             method = {"positionRightArm", "positionLeftArm"},
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/client/render/entity/model/CrossbowPosing;hold(Lnet/minecraft/client/model/ModelPart;Lnet/minecraft/client/model/ModelPart;Lnet/minecraft/client/model/ModelPart;Z)V",
+                    target = "Lnet/minecraft/client/render/entity/model/ArmPosing;hold(Lnet/minecraft/client/model/ModelPart;Lnet/minecraft/client/model/ModelPart;Lnet/minecraft/client/model/ModelPart;Z)V",
                     shift = At.Shift.AFTER
             ),
             cancellable = true

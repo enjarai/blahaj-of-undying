@@ -7,6 +7,8 @@ import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.text.ClickEvent;
 import net.minecraft.text.Text;
 
+import java.net.URI;
+
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.literal;
 
 public class BlahajCommand {
@@ -29,9 +31,9 @@ public class BlahajCommand {
                                 .styled(style -> style
                                         .withColor(0x6666ff)
                                         .withUnderline(true)
-                                        .withClickEvent(new ClickEvent(
-                                                ClickEvent.Action.OPEN_URL, "https://enjarai.dev/blahaj-of-undying/"
-                                        ))
+                                        .withClickEvent(new ClickEvent.OpenUrl(URI.create(
+                                                "https://enjarai.dev/blahaj-of-undying/"
+                                        )))
                                 )
                 )
         );

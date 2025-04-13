@@ -17,7 +17,7 @@ public class JsonUnbakedModel$DeserializerMixin {
     )
     private JsonUnbakedModel deserializeAdditionalField(JsonUnbakedModel original, @Local(argsOnly = true) JsonElement element) {
         if (element.getAsJsonObject().has("huggable")) {
-            ((UnbakedHuggableModel) original).blahaj_totem$setHuggable(
+            ((UnbakedHuggableModel) (Object) original).blahaj_totem$setHuggable(
                     JsonHelper.getBoolean(element.getAsJsonObject(), "huggable"));
         }
         return original;

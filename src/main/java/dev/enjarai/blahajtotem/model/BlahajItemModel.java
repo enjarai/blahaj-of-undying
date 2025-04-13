@@ -12,8 +12,8 @@ import net.minecraft.client.render.model.ResolvableModel;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.ItemDisplayContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ModelTransformationMode;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
@@ -36,7 +36,7 @@ public final class BlahajItemModel implements ItemModel {
 
 
     @Override
-    public void update(ItemRenderState state, ItemStack stack, ItemModelManager resolver, ModelTransformationMode transformationMode, @Nullable ClientWorld world, @Nullable LivingEntity user, int seed) {
+    public void update(ItemRenderState state, ItemStack stack, ItemModelManager resolver, ItemDisplayContext transformationMode, @Nullable ClientWorld world, @Nullable LivingEntity user, int seed) {
         if (stack.contains(DataComponentTypes.CUSTOM_NAME)) {
             var name = new HashSet<>(Arrays.asList(stack.getName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]")));
             Pair<String, Variant> type = null;

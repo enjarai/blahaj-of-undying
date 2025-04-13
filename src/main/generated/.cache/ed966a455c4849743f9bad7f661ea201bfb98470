@@ -1,4 +1,4 @@
-// 1.21.4	-999999999-01-01T00:00:00	Blåhaj of Undying/Model Definitions
+// 1.21.5	-999999999-01-01T00:00:00	Blåhaj of Undying/Model Definitions
 d881583e251c11ae404ea68cb04daac63d94e5e0 assets/blahaj_totem/models/item/blahaj_skins/ace_shark.json
 1e880d8e08646bc6dd9402c9c532e4070cf2ad3a assets/blahaj_totem/models/item/blahaj_skins/ace_shark_large.json
 252460326c5445a6d1750d595200fba878ee9fb2 assets/blahaj_totem/models/item/blahaj_skins/agender_shark.json
@@ -85,4 +85,4 @@ a891207517bc974ef04404b74735b284e0061370 assets/blahaj_totem/models/item/blahaj_
 292ea4e2a8074d13158d6f56df7d1591b0ba135b assets/blahaj_totem/models/item/blahaj_skins/white_shark_large.json
 19e7004880b6b8e45a2d1238f29032ec6eb7b23c assets/blahaj_totem/models/item/blahaj_skins/yellow_shark.json
 bd73a35fa492e8360a02ad51170a43b472b3946b assets/blahaj_totem/models/item/blahaj_skins/yellow_shark_large.json
-bad85c2c1ea0bd41ae35b0836b209e7ef00908b9 assets/minecraft/items/totem_of_undying.json
+513227959cf0307275c5736b6c5e2713da98152b assets/minecraft/items/totem_of_undying.json

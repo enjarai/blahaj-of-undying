@@ -1,1 +1,1 @@
-- Fixed a crash with Continuity, and possibly other mods. Part two.
+- Updated to 1.21.5.

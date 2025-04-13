@@ -8,13 +8,13 @@
     "defaultRequire": 1
   },
   "client": [
-    "BasicBakedModelMixin",
+    "BasicItemModel$UnbakedMixin",
+    "BasicItemModelMixin",
     "BipedEntityModelMixin",
     "ClientPlayNetworkHandlerMixin",
     "ItemRenderStateMixin",
     "JsonUnbakedModel$DeserializerMixin",
     "JsonUnbakedModelMixin",
-    "LayerRenderStateAccessor",
     "PlayerEntityRendererMixin"
   ]
 }
