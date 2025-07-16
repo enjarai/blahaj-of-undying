@@ -27,12 +27,12 @@ public class BlahajCommand {
                                 .append(Text.literal(" of ").withColor(0xffffff))
                                 .append(Text.literal("Undying").withColor(0xf8abb9))
                 ).append("\n").append(
-                        Text.literal("https://enjarai.dev/blahaj-of-undying/")
+                        Text.literal("https://blahaj-of-undying.enjarai.dev/")
                                 .styled(style -> style
                                         .withColor(0x6666ff)
                                         .withUnderline(true)
                                         .withClickEvent(new ClickEvent.OpenUrl(URI.create(
-                                                "https://enjarai.dev/blahaj-of-undying/"
+                                                "https://blahaj-of-undying.enjarai.dev/"
                                         )))
                                 )
                 )
