@@ -7,6 +7,8 @@ import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleFactory;
 import net.minecraft.client.particle.SpriteProvider;
 import net.minecraft.client.world.ClientWorld;
+import net.minecraft.util.math.random.Random;
+import org.jetbrains.annotations.Nullable;
 
 public class BlahajParticle extends AnimatedParticle {
     protected BlahajParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, int[] colors, SpriteProvider spriteProvider) {
@@ -17,7 +19,7 @@ public class BlahajParticle extends AnimatedParticle {
         this.velocityZ = velocityZ;
         this.scale *= 0.75F;
         this.maxAge = 60 + this.random.nextInt(12);
-        this.setSpriteForAge(spriteProvider);
+//        this.setSpriteForAge(spriteProvider);
 
         if (colors.length >= 1) {
             this.setColor(colors[this.random.nextInt(colors.length)]);
@@ -32,8 +34,9 @@ public class BlahajParticle extends AnimatedParticle {
             this.spriteProvider = spriteProvider;
         }
 
-        public Particle createParticle(BlahajParticleEffect effect, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            return new BlahajParticle(clientWorld, d, e, f, g, h, i, effect.colors(), this.spriteProvider);
+        @Override
+        public @Nullable Particle createParticle(BlahajParticleEffect effect, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, Random random) {
+            return new BlahajParticle(world, x, y, z, velocityX, velocityY, velocityZ, effect.colors(), this.spriteProvider);
         }
     }
 }

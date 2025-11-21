@@ -11,9 +11,9 @@ import net.minecraft.client.render.item.model.ItemModelTypes;
 import net.minecraft.client.render.model.ResolvableModel;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.component.DataComponentTypes;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemDisplayContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.HeldItemContext;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
@@ -34,9 +34,8 @@ public final class BlahajItemModel implements ItemModel {
                 .toList());
     }
 
-
     @Override
-    public void update(ItemRenderState state, ItemStack stack, ItemModelManager resolver, ItemDisplayContext transformationMode, @Nullable ClientWorld world, @Nullable LivingEntity user, int seed) {
+    public void update(ItemRenderState state, ItemStack stack, ItemModelManager resolver, ItemDisplayContext displayContext, @Nullable ClientWorld world, @Nullable HeldItemContext heldItemContext, int seed) {
         if (stack.contains(DataComponentTypes.CUSTOM_NAME)) {
             var name = new HashSet<>(Arrays.asList(stack.getName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]")));
             Pair<String, Variant> type = null;
@@ -46,22 +45,22 @@ public final class BlahajItemModel implements ItemModel {
                 List<String> vSplit = Arrays.asList(vName.split("[ \\-_]"));
 
                 if (name.containsAll(vSplit) && (type == null || (vName.length() > type.getFirst().length()
-                        && !variant.getSecond().lesser()) || type.getSecond().lesser())) {
+                    && !variant.getSecond().lesser()) || type.getSecond().lesser())) {
                     type = variant;
                 }
             }
 
             if (type != null) {
                 if (isLarge(name)) {
-                    type.getSecond().large().update(state, stack, resolver, transformationMode, world, user, seed);
+                    type.getSecond().large().update(state, stack, resolver, displayContext, world, heldItemContext, seed);
                 } else {
-                    type.getSecond().normal().update(state, stack, resolver, transformationMode, world, user, seed);
+                    type.getSecond().normal().update(state, stack, resolver, displayContext, world, heldItemContext, seed);
                 }
                 return;
             }
         }
 
-        fallback.update(state, stack, resolver, transformationMode, world, user, seed);
+        fallback.update(state, stack, resolver, displayContext, world, heldItemContext, seed);
     }
 
     private boolean isLarge(Set<String> name) {

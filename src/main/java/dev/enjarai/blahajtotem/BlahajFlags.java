@@ -13,7 +13,7 @@ public class BlahajFlags {
     public static boolean isHuggable(ItemStack itemStack, LivingEntity entity) {
         reusableRenderState.clear();
         ((HuggableItemRenderState) reusableRenderState).blahaj_totem$setHuggable(false);
-        MinecraftClient.getInstance().getItemModelManager().update(reusableRenderState, itemStack, ItemDisplayContext.NONE, entity.getWorld(), entity, 0);
+        MinecraftClient.getInstance().getItemModelManager().update(reusableRenderState, itemStack, ItemDisplayContext.NONE, entity.getEntityWorld(), entity, 0);
         return ((HuggableItemRenderState) reusableRenderState).blahaj_totem$isHuggable();
     }
 }
