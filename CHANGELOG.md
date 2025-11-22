@@ -1,2 +1,1 @@
-- Updated to 1.21.6-7.
-- Fixed arm pose not resetting after deselecting blahaj.
+- Updated to 1.21.9-10. (Thank you @lennoxlotl!)
