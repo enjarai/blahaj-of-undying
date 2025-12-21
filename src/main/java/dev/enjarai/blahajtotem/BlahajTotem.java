@@ -7,8 +7,8 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
+import net.fabricmc.fabric.api.resource.v1.pack.PackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.render.item.model.ItemModelTypes;
 import net.minecraft.component.DataComponentTypes;
@@ -92,9 +92,10 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
     public void onInitializeClient() {
         ItemModelTypes.ID_MAPPER.put(BlahajTotem.id("blahaj"), BlahajItemModel.Unbaked.CODEC);
 
-        ResourceManagerHelper.registerBuiltinResourcePack(
+        //noinspection NoTranslation
+        ResourceLoader.registerBuiltinPack(
                 BlahajTotem.id("default_to_totem"), FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
-                Text.translatable("blahaj_totem.resourcepack.default_to_totem"), ResourcePackActivationType.NORMAL
+                Text.translatable("blahaj_totem.resourcepack.default_to_totem"), PackActivationType.NORMAL
         );
 
         ModParticles.register();
