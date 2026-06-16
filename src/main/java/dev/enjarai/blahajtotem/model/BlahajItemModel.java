@@ -4,20 +4,22 @@ import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.client.item.ItemModelManager;
-import net.minecraft.client.render.item.ItemRenderState;
-import net.minecraft.client.render.item.model.ItemModel;
-import net.minecraft.client.render.item.model.ItemModelTypes;
-import net.minecraft.client.render.model.ResolvableModel;
-import net.minecraft.client.world.ClientWorld;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.item.ItemDisplayContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.HeldItemContext;
 import org.jetbrains.annotations.Nullable;
+import org.joml.Matrix4fc;
 
 import java.util.*;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.renderer.item.ItemModel;
+import net.minecraft.client.renderer.item.ItemModelResolver;
+import net.minecraft.client.renderer.item.ItemModels;
+import net.minecraft.client.renderer.item.ItemStackRenderState;
+import net.minecraft.client.resources.model.ResolvableModel;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.entity.ItemOwner;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.ItemStack;
 
+import static dev.enjarai.blahajtotem.BlahajTotem.HUGGABLE_KEY;
 import static dev.enjarai.blahajtotem.BlahajTotem.LARGE_KEYWORDS;
 
 public final class BlahajItemModel implements ItemModel {
@@ -35,9 +37,9 @@ public final class BlahajItemModel implements ItemModel {
     }
 
     @Override
-    public void update(ItemRenderState state, ItemStack stack, ItemModelManager resolver, ItemDisplayContext displayContext, @Nullable ClientWorld world, @Nullable HeldItemContext heldItemContext, int seed) {
-        if (stack.contains(DataComponentTypes.CUSTOM_NAME)) {
-            var name = new HashSet<>(Arrays.asList(stack.getName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]")));
+    public void update(ItemStackRenderState state, ItemStack stack, ItemModelResolver resolver, ItemDisplayContext displayContext, @Nullable ClientLevel world, @Nullable ItemOwner heldItemContext, int seed) {
+        if (stack.has(DataComponents.CUSTOM_NAME)) {
+            var name = new HashSet<>(Arrays.asList(stack.getHoverName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]")));
             Pair<String, Variant> type = null;
 
             for (var variant : index) {
@@ -76,46 +78,46 @@ public final class BlahajItemModel implements ItemModel {
     }
 
     public record Unbaked(List<UnbakedVariant> variants, ItemModel.Unbaked fallback) implements ItemModel.Unbaked {
-        public static final MapCodec<Unbaked> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
-                UnbakedVariant.CODEC.codec().listOf().fieldOf("variants").forGetter(Unbaked::variants),
-                ItemModelTypes.CODEC.fieldOf("fallback").forGetter(Unbaked::fallback)
-        ).apply(instance, Unbaked::new));
+        public static final MapCodec<dev.enjarai.blahajtotem.model.BlahajItemModel.Unbaked> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
+                UnbakedVariant.CODEC.codec().listOf().fieldOf("variants").forGetter(dev.enjarai.blahajtotem.model.BlahajItemModel.Unbaked::variants),
+                ItemModels.CODEC.fieldOf("fallback").forGetter(dev.enjarai.blahajtotem.model.BlahajItemModel.Unbaked::fallback)
+        ).apply(instance, dev.enjarai.blahajtotem.model.BlahajItemModel.Unbaked::new));
 
         @Override
-        public MapCodec<? extends ItemModel.Unbaked> getCodec() {
+        public MapCodec<? extends ItemModel.Unbaked> type() {
             return CODEC;
         }
 
         @Override
-        public ItemModel bake(BakeContext context) {
+        public ItemModel bake(BakingContext context, Matrix4fc transformation) {
             return new BlahajItemModel(
-                    variants().stream().map($ -> $.bake(context)).toList(),
-                    fallback().bake(context)
+                    variants().stream().map($ -> $.bake(context, transformation)).toList(),
+                    fallback().bake(context, transformation)
             );
         }
 
         @Override
-        public void resolve(Resolver resolver) {
+        public void resolveDependencies(Resolver resolver) {
             variants().forEach($ -> $.resolve(resolver));
-            fallback().resolve(resolver);
+            fallback().resolveDependencies(resolver);
         }
     }
 
     public record UnbakedVariant(List<String> keywords, ItemModel.Unbaked normal, ItemModel.Unbaked large, boolean lesser) {
         public static final MapCodec<UnbakedVariant> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
                 Codec.STRING.listOf().fieldOf("keywords").forGetter(UnbakedVariant::keywords),
-                ItemModelTypes.CODEC.fieldOf("normal").forGetter(UnbakedVariant::normal),
-                ItemModelTypes.CODEC.fieldOf("large").forGetter(UnbakedVariant::large),
+                ItemModels.CODEC.fieldOf("normal").forGetter(UnbakedVariant::normal),
+                ItemModels.CODEC.fieldOf("large").forGetter(UnbakedVariant::large),
                 Codec.BOOL.optionalFieldOf("lesser", false).forGetter(UnbakedVariant::lesser)
         ).apply(instance, UnbakedVariant::new));
 
-        public Variant bake(BakeContext context) {
-            return new Variant(keywords(), normal().bake(context), large().bake(context), lesser());
+        public Variant bake(BakingContext context, Matrix4fc transformation) {
+            return new Variant(keywords(), normal().bake(context, transformation), large().bake(context, transformation), lesser());
         }
 
         public void resolve(ResolvableModel.Resolver resolver) {
-            normal().resolve(resolver);
-            large().resolve(resolver);
+            normal().resolveDependencies(resolver);
+            large().resolveDependencies(resolver);
         }
     }
 }

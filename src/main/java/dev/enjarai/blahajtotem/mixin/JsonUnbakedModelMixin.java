@@ -1,12 +1,13 @@
 package dev.enjarai.blahajtotem.mixin;
 
 import dev.enjarai.blahajtotem.pond.UnbakedHuggableModel;
-import net.minecraft.client.render.model.json.JsonUnbakedModel;
+import net.minecraft.client.resources.model.cuboid.CuboidModel;
+
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 
-@Mixin(JsonUnbakedModel.class)
+@Mixin(CuboidModel.class)
 public class JsonUnbakedModelMixin implements UnbakedHuggableModel {
     @Unique @Nullable
     private Boolean huggable;

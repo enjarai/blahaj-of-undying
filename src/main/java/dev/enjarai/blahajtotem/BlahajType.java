@@ -1,8 +1,7 @@
 package dev.enjarai.blahajtotem;
 
-import net.minecraft.util.Identifier;
-
 import java.util.List;
+import net.minecraft.resources.Identifier;
 
 public record BlahajType(String name, List<String> alternatives, Identifier model, boolean lesser, int... colors) {
     public BlahajType(String name, int... colors) {
