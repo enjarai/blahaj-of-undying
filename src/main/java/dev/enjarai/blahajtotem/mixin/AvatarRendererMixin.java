@@ -21,11 +21,8 @@ public class AvatarRendererMixin<AvatarlikeEntity extends Avatar & ClientAvatarE
     )
     private void extractHumanoidRenderState(final AvatarlikeEntity entity, final AvatarRenderState state, final float partialTicks, CallbackInfo ci) {
         if(state.leftHandItemState.getDataOrDefault(BlahajTotem.HUGGABLE_KEY, false) || state.rightHandItemState.getDataOrDefault(BlahajTotem.HUGGABLE_KEY, false)) {
-            state.setData(BlahajTotem.HUGGABLE_KEY, true);
             state.leftArmPose = HumanoidModel.ArmPose.CROSSBOW_HOLD;
             state.rightArmPose = HumanoidModel.ArmPose.CROSSBOW_HOLD;
-        } else {
-            state.setData(BlahajTotem.HUGGABLE_KEY, false);
         }
     }
 }
