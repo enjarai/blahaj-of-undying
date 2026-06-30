@@ -1,5 +1,12 @@
 # Blåhaj of Undying
 
+> [!WARNING]
+> Like some of my other projects, this repository has been migrated to Codeberg.
+> Any new issues or pull requests here will be ignored, please create them over at the new repository.
+> 
+> New repository:
+> https://codeberg.org/enjarai/blahaj-of-undying
+
 This is a client-side version of [Blåhaj](https://modrinth.com/mod/blahaj) by Hibi. This version replaces the totem of undying model and name instead of creating a new item for our beloved Blåhaj, who you can now cuddle even on vanilla servers!
 
 ![](img/blahaj.png)
