@@ -5,21 +5,25 @@ import dev.enjarai.blahajtotem.model.BlahajItemModel;
 import dev.enjarai.blahajtotem.particle.ModParticles;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
+import net.fabricmc.fabric.api.client.rendering.v1.RenderStateDataKey;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
 import net.fabricmc.fabric.api.resource.v1.pack.PackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.client.render.item.model.ItemModelTypes;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.text.Text;
-import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
-import nl.enjarai.cicada.api.render.RenderStateKey;
-import nl.enjarai.cicada.api.render.RenderStateUpdateEvent;
+import net.minecraft.client.renderer.item.ItemModels;
+import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.component.predicates.DataComponentPredicate;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
@@ -86,35 +90,20 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
             ), BlahajTotem.id("item/mahiro"), 0xeddbd6, 0xffaaa7, 0xf38b9a, 0xebf6fa)
     );
 
-    public static final RenderStateKey<Boolean> HUGGABLE_KEY = RenderStateKey.of(id("huggable"), false);
+    public static final RenderStateDataKey<Boolean> HUGGABLE_KEY = RenderStateDataKey.create(() -> "huggable");
 
     @Override
     public void onInitializeClient() {
-        ItemModelTypes.ID_MAPPER.put(BlahajTotem.id("blahaj"), BlahajItemModel.Unbaked.CODEC);
+        ItemModels.ID_MAPPER.put(BlahajTotem.id("blahaj"), BlahajItemModel.Unbaked.CODEC);
 
-        //noinspection NoTranslation
+        // noinspection NoTranslation
         ResourceLoader.registerBuiltinPack(
                 BlahajTotem.id("default_to_totem"), FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
-                Text.translatable("blahaj_totem.resourcepack.default_to_totem"), PackActivationType.NORMAL
-        );
+                Component.translatable("blahaj_totem.resourcepack.default_to_totem"), PackActivationType.NORMAL);
 
         ModParticles.register();
 
         ClientCommandRegistrationCallback.EVENT.register(BlahajCommand::register);
-
-        RenderStateUpdateEvent.get(PlayerEntity.class).register((player, entityRenderState, tickDelta) -> {
-            HUGGABLE_KEY.put(entityRenderState, isHugging(player));
-        });
-    }
-
-    public static boolean isHugging(PlayerEntity player) {
-        for (Hand hand : Hand.values()) {
-            ItemStack lv = player.getStackInHand(hand);
-            if (BlahajFlags.isHuggable(lv, player)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     @Override
@@ -125,14 +114,14 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
     public static final LinkedList<Pair<String, BlahajType>> SEARCHABLE_VARIANTS = new LinkedList<>(VARIANTS.stream()
             .flatMap(type -> Stream.concat(
                     Stream.of(Pair.of(type.name(), type)),
-                    type.alternatives().stream().map(alt -> Pair.of(alt, type))
-            ))
+                    type.alternatives().stream().map(alt -> Pair.of(alt, type))))
             .toList());
 
     @Nullable
     public static BlahajType getShorkType(ItemStack stack) {
-        if (stack.isOf(Items.TOTEM_OF_UNDYING) && stack.contains(DataComponentTypes.CUSTOM_NAME)) {
-            var name = new HashSet<>(Arrays.asList(stack.getName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]")));
+        if (stack.is(Items.TOTEM_OF_UNDYING) && stack.has(DataComponents.CUSTOM_NAME)) {
+            var name = new HashSet<>(
+                    Arrays.asList(stack.getHoverName().getString().toLowerCase(Locale.ROOT).split("[ \\-_]")));
             Pair<String, BlahajType> type = null;
 
             for (var variant : SEARCHABLE_VARIANTS) {
@@ -154,6 +143,6 @@ public class BlahajTotem implements ClientModInitializer, DataGeneratorEntrypoin
     }
 
     public static Identifier id(String path) {
-        return Identifier.of(NAMESPACE, path);
+        return Identifier.fromNamespaceAndPath(NAMESPACE, path);
     }
 }

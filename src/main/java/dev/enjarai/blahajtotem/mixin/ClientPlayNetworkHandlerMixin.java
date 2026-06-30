@@ -3,29 +3,29 @@ package dev.enjarai.blahajtotem.mixin;
 import com.llamalad7.mixinextras.sugar.Local;
 import dev.enjarai.blahajtotem.particle.BlahajParticleEffect;
 import dev.enjarai.blahajtotem.particle.ModParticles;
-import net.minecraft.client.network.ClientPlayNetworkHandler;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.particle.ParticleEffect;
-import net.minecraft.util.Hand;
+import net.minecraft.client.multiplayer.ClientPacketListener;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
-@Mixin(ClientPlayNetworkHandler.class)
+@Mixin(ClientPacketListener.class)
 public abstract class ClientPlayNetworkHandlerMixin {
     @ModifyArg(
-            method = "onEntityStatus",
+            method = "handleEntityEvent",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/client/particle/ParticleManager;addEmitter(Lnet/minecraft/entity/Entity;Lnet/minecraft/particle/ParticleEffect;I)V"
+                    target = "Lnet/minecraft/client/particle/ParticleEngine;createTrackingEmitter(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/particles/ParticleOptions;I)V"
             ),
             index = 1
     )
-    private ParticleEffect modifyTotemParticle(ParticleEffect original, @Local Entity entity) {
+    private ParticleOptions modifyTotemParticle(ParticleOptions original, @Local Entity entity) {
         if (entity instanceof LivingEntity livingEntity) {
             var colors = BlahajParticleEffect.getColorsForShork(getActiveTotemOfUndyingForAnyEntity(livingEntity));
 
@@ -39,9 +39,9 @@ public abstract class ClientPlayNetworkHandlerMixin {
 
     @Unique
     private static ItemStack getActiveTotemOfUndyingForAnyEntity(LivingEntity entity) {
-        for (Hand hand : Hand.values()) {
-            ItemStack itemStack = entity.getStackInHand(hand);
-            if (itemStack.isOf(Items.TOTEM_OF_UNDYING)) {
+        for (InteractionHand hand : InteractionHand.values()) {
+            ItemStack itemStack = entity.getItemInHand(hand);
+            if (itemStack.is(Items.TOTEM_OF_UNDYING)) {
                 return itemStack;
             }
         }

@@ -3,28 +3,27 @@ package dev.enjarai.blahajtotem;
 import com.google.gson.JsonObject;
 import dev.enjarai.blahajtotem.model.BlahajItemModel;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.ItemModels;
-import net.minecraft.item.Items;
-
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.minecraft.client.data.models.BlockModelGenerators;
+import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ItemModelUtils;
+import net.minecraft.world.item.Items;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
 public class ShorkModelGenerator extends FabricModelProvider {
-    public ShorkModelGenerator(FabricDataOutput output) {
+    public ShorkModelGenerator(FabricPackOutput output) {
         super(output);
     }
 
     @Override
-    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+    public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
 
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+    public void generateItemModels(ItemModelGenerators itemModelGenerator) {
         var largeSuffixes = List.of("", "_large");
 
         var variants = new ArrayList<BlahajItemModel.UnbakedVariant>();
@@ -34,20 +33,20 @@ public class ShorkModelGenerator extends FabricModelProvider {
 
             variants.add(new BlahajItemModel.UnbakedVariant(
                     Stream.concat(Stream.of(variant.name()), variant.alternatives().stream()).toList(),
-                    ItemModels.basic(BlahajTotem.id("item/blahaj_skins/" + variant.name() + "_shark")),
-                    ItemModels.basic(BlahajTotem.id("item/blahaj_skins/" + variant.name() + "_shark_large")),
+                    ItemModelUtils.plainModel(BlahajTotem.id("item/blahaj_skins/" + variant.name() + "_shark")),
+                    ItemModelUtils.plainModel(BlahajTotem.id("item/blahaj_skins/" + variant.name() + "_shark_large")),
                     variant.lesser()
             ));
         }
 
-        itemModelGenerator.output.accept(Items.TOTEM_OF_UNDYING, new BlahajItemModel.Unbaked(
+        itemModelGenerator.itemModelOutput.accept(Items.TOTEM_OF_UNDYING, new BlahajItemModel.Unbaked(
                 variants,
-                ItemModels.basic(BlahajTotem.id("item/totem_parent"))
+                ItemModelUtils.plainModel(BlahajTotem.id("item/totem_parent"))
         ));
 
         largeSuffixes.forEach(suffix -> {
             BlahajTotem.VARIANTS.forEach(variant -> {
-                itemModelGenerator.modelCollector.accept(BlahajTotem.id("item/blahaj_skins/" + variant.name() + "_shark" + suffix), () -> {
+                itemModelGenerator.modelOutput.accept(BlahajTotem.id("item/blahaj_skins/" + variant.name() + "_shark" + suffix), () -> {
                     var model = new JsonObject();
                     model.addProperty("parent", variant.model().toString() + suffix);
 

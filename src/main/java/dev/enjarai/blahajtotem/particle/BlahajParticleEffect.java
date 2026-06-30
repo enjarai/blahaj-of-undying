@@ -3,18 +3,17 @@ package dev.enjarai.blahajtotem.particle;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import dev.enjarai.blahajtotem.BlahajTotem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.network.RegistryByteBuf;
-import net.minecraft.network.codec.PacketCodec;
-import net.minecraft.network.codec.PacketCodecs;
-import net.minecraft.particle.ParticleEffect;
-import net.minecraft.particle.ParticleType;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.IntStream;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.world.item.ItemStack;
 
-public record BlahajParticleEffect(ParticleType<BlahajParticleEffect> type, int[] colors) implements ParticleEffect {
+public record BlahajParticleEffect(ParticleType<BlahajParticleEffect> type, int[] colors) implements ParticleOptions {
     public static MapCodec<BlahajParticleEffect> createCodec(ParticleType<BlahajParticleEffect> type) {
         return Codec.INT_STREAM.xmap(
                 intStream -> new BlahajParticleEffect(type, intStream.toArray()),
@@ -22,9 +21,9 @@ public record BlahajParticleEffect(ParticleType<BlahajParticleEffect> type, int[
         ).fieldOf("colors");
     }
 
-    public static PacketCodec<RegistryByteBuf, BlahajParticleEffect> createPacketCodec(ParticleType<BlahajParticleEffect> type) {
-        return PacketCodec.tuple(
-                PacketCodecs.collection(ArrayList::new, PacketCodecs.INTEGER, 32), effect -> Arrays.stream(effect.colors).boxed().toList(),
+    public static StreamCodec<RegistryFriendlyByteBuf, BlahajParticleEffect> createPacketCodec(ParticleType<BlahajParticleEffect> type) {
+        return StreamCodec.composite(
+                ByteBufCodecs.collection(ArrayList::new, ByteBufCodecs.INT, 32), effect -> Arrays.stream(effect.colors).boxed().toList(),
                 list -> new BlahajParticleEffect(type, list.stream().mapToInt(i -> i).toArray())
         );
     }

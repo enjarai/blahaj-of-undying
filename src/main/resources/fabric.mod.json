@@ -27,10 +27,10 @@
 		"blahaj-totem.mixins.json"
 	],
 	"depends": {
-		"java": ">=17",
-		"fabric": "*",
-		"minecraft": ">=1.21.4",
-		"cicada": ">=0.10.2"
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1",
+		"java": ">=25",
+		"fabric-api": "*"
 	},
 
 	"custom": {
